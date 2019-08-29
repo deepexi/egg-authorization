@@ -21,7 +21,8 @@ Deepexi Egg's JWT(JSON Web Token Authentication Plugin)
 ## Install
 
 ```bash
-$ npm i @jackyhweng/egg-jwt --save
+$ npm i egg-authorizatio --save
+
 ```
 
 
@@ -31,7 +32,7 @@ $ npm i @jackyhweng/egg-jwt --save
 // {app_root}/config/plugin.js
 exports.jwt = {
   enable: true,
-  package: "@jackyhweng/egg-jwt"
+  package: "egg-authorizatio"
 };
 ```
 
@@ -40,10 +41,18 @@ exports.jwt = {
 ```js
 // {app_root}/config/config.default.js
 'use strict';
-exports.jwt = {
+exports.auth = {
   enable: true,
+  type: 'jwt',
+  secret: 'XnMib79vzwP01gtr',
+  enableParse: true,
+  enableSignature: false,
   // match和ignore不能同时使用
-  match: ['/*']
+  match: [ '/login' ],
+  onerror: {
+    type: 'json',
+    enable: true,
+  },
 };
 ```
 
@@ -56,19 +65,44 @@ see [config/config.default.js](config/config.default.js) for more detail.
 "use strict";
 
 module.exports = app => {
-  app.get('/test',app.controller.test.index);
+  app.get('/login',app.controller.login.index);
 };
 ```
 
+
 ```js
+'use strict';
+
+module.exports = app => {
+  class LoginController extends app.Controller {
+    * index() {
+      console.log('login userInfo body : ', this.ctx.query.user);
+      this.ctx.body = this.ctx.query.user;
+    }
+  }
+  return LoginController;
+};
+
+
+```
+
+
+
+you can use this way to get the token context 
+
+```js
+
 // app/controller/test.js
 ("use strict");
 
 module.exports = app => {
   class SuccessController extends app.Controller {
     index() {
-         console.log('query body : ', this.ctx.query);
-         this.ctx.body = this.ctx.query;
+        // get the token 
+        const authorization = this.ctx.headers.authorization;
+        const data = this.ctx.auth.decode(authorization);
+        console.log(data);
+        this.ctx.body = data;
     }
   }
   return SuccessController;

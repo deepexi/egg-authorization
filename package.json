@@ -1,6 +1,6 @@
 {
   "name": "egg-authorization",
-  "version": "1.1.7",
+  "version": "1.0.0",
   "description": "egg authorization plugin for egg",
   "eggPlugin": {
     "name": "egg-authorization",
@@ -69,12 +69,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:deepexi/egg-jwt2.git"
+    "url": "git+ssh://git@github.com:deepexi/egg-authorization.git"
   },
   "author": "jackyhweng",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/deepexi/egg-jwt2.git"
+    "url": "https://github.com/deepexi/egg-authorization.git"
   },
-  "homepage": "https://github.com/deepexi/egg-jwt2#readme"
+  "homepage": "https://github.com/deepexi/egg-authorization.git#readme"
 }
