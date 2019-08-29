@@ -1,0 +1,80 @@
+{
+  "name": "egg-authorization",
+  "version": "1.1.7",
+  "description": "egg authorization plugin for egg",
+  "eggPlugin": {
+    "name": "egg-authorization",
+    "optionalDependencies": [
+      "onerror"
+    ]
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "egg-jwt",
+    "jwt",
+    "egg-authorization",
+    "jackyhweng"
+  ],
+  "dependencies": {
+    "jsonpath": "^1.0.2",
+    "jsonwebtoken": "^8.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "autod-egg": "^1.1.0",
+    "husky": "^2.7.0",
+    "standard-version": "^6.0.1",
+    "autod": "^3.0.1",
+    "egg": "^2.10.0",
+    "egg-bin": "^4.8.1",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.19.3",
+    "eslint": "^6.1.0",
+    "eslint-config-egg": "^7.0.0",
+    "eslint-config-google": "^0.13.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "files": [
+    "index.js",
+    "app.js",
+    "agent.js",
+    "index.d.ts",
+    "config",
+    "app",
+    "lib",
+    "commitlint.config.js"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm test"
+    }
+  },
+  "ci": {
+    "version": "6, 7, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:deepexi/egg-jwt2.git"
+  },
+  "author": "jackyhweng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepexi/egg-jwt2.git"
+  },
+  "homepage": "https://github.com/deepexi/egg-jwt2#readme"
+}
