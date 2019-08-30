@@ -1,6 +1,6 @@
 {
   "name": "egg-authorization",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "egg authorization plugin for egg",
   "eggPlugin": {
     "name": "egg-authorization",

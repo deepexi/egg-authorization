@@ -49,11 +49,15 @@ exports.auth = {
   // jwt配置
   jwt: {
     common: {
+      // 是否开启解析
       enableParse: true,
+      // 是否开启验签
       enableSignature: false,
+      // 是否开启错误处理
       enableOnError: true,
     },
     generate: {
+      // 生成秘钥
       secret: '123456',
       // 有效时间
       exp: 3600,
@@ -61,6 +65,8 @@ exports.auth = {
     parse: {
       // 需要解析 token 的位置
       tokenPos: 'headers.authorization',
+      // 解析秘钥
+      secret: '123456',
     },
     // 用户自定义错误
     onerror: {
