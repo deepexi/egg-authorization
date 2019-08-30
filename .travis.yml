@@ -1,14 +1,13 @@
 sudo: false
 language: node_js
 node_js:
-  - '6'
-  - '7'
-  - '8'
-before_install:
-  - npm i npminstall -g
+  - '10'
+cache: npm
 install:
-  - npminstall
+  - npm i
+before_script:
+  - npm i nyc mocha -g
 script:
-  - npm run ci
-after_script:
-  - npminstall codecov && codecov
+  - npm run cov
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -f coverage.lcov
