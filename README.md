@@ -7,12 +7,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-authorization.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/egg-authorization
-[travis-image]: https://img.shields.io/travis/deepexi/egg-jwt2.svg?style=flat-square
-[travis-url]: https://travis-ci.org/deepexi/egg-jwt2
-[codecov-image]: https://img.shields.io/codecov/c/gh/deepexi/egg-jwt2.svg?style=flat-square
-[codecov-url]: https://codecov.io/gh/deepexi/egg-jwt2
-[download-image]: https://img.shields.io/npm/dw/@jackyhweng/egg-jwt
-[download-url]: https://www.npmjs.com/package/@jackyhweng/egg-jwt
+[travis-image]: https://img.shields.io/travis/deepexi/egg-authorization.svg?style=flat-square
+[travis-url]: https://travis-ci.org/deepexi/egg-authorization
+[codecov-image]: https://img.shields.io/codecov/c/gh/deepexi/egg-authorization.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/deepexi/egg-authorization
+[download-image]: https://img.shields.io/npm/dw/egg-authorization
+[download-url]: https://www.npmjs.com/package/egg-authorization
 
 
 
