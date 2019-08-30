@@ -1,12 +1,12 @@
-# egg-jwt
+# egg-authorization
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
 ![npm](https://img.shields.io/npm/dw/@jackyhweng/egg-jwt)
 
-[npm-image]: https://img.shields.io/npm/v/egg-jwt2.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/egg-jwt2
+[npm-image]: https://img.shields.io/npm/v/egg-authorization.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/egg-authorization
 [travis-image]: https://img.shields.io/travis/deepexi/egg-jwt2.svg?style=flat-square
 [travis-url]: https://travis-ci.org/deepexi/egg-jwt2
 [codecov-image]: https://img.shields.io/codecov/c/gh/deepexi/egg-jwt2.svg?style=flat-square
@@ -16,7 +16,7 @@
 
 
 
-Deepexi Egg's JWT(JSON Web Token Authentication Plugin)
+Egg's authorization(JSON Web Token Authentication Plug)
 
 ## Install
 
