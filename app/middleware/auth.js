@@ -54,7 +54,7 @@ module.exports = options => {
       const commonConfig = options.jwt.common;
       const onerrorConfig = options.jwt.onerror;
       if (!commonConfig.enableOnError || onerrorConfig.strategy === 'ignore') {
-        return;
+        await next();
       }
       // 按照策略处理 ignore、exception
       if (commonConfig.enableOnError && onerrorConfig.strategy === 'returnFormat') {
